@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre Panamá con BMPANAMATRIPS. City tours, islas, cultura, naturaleza y aventuras. Reserva por WhatsApp.">
+  <title>BMPANAMATRIPS | Descubre Panamá</title>
+  <style>
+    :root{--navy:#073b4c;--blue:#087e8b;--turq:#18a7a1;--sand:#fff7e8;--coral:#ff8066;--ink:#16343b;--muted:#63777b;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+    a{color:inherit;text-decoration:none}.topbar{background:var(--navy);color:#eafafa;text-align:center;padding:9px 16px;font-size:13px}
+    header{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(10px);border-bottom:1px solid #e5eeee}
+    .nav{max-width:1160px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:900;letter-spacing:1px;color:var(--navy);font-size:21px}.brand span{color:var(--turq)}
+    nav{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:700}nav a:hover{color:var(--turq)}
+    .lang{border:1px solid #c9dddd;background:white;border-radius:20px;padding:8px 12px;font-weight:700;cursor:pointer;color:var(--navy)}
+    .hero{min-height:570px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(3,38,52,.82),rgba(3,38,52,.25)),url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=2000&q=85') center/cover}
+    .hero-inner{max-width:1160px;margin:auto;padding:80px 22px;width:100%}.eyebrow{display:inline-block;background:#ffffff20;border:1px solid #ffffff70;padding:8px 13px;border-radius:30px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+    h1{font-size:clamp(42px,7vw,76px);line-height:1.02;max-width:720px;margin:22px 0 18px}.hero p{font-size:18px;line-height:1.65;max-width:570px;color:#edfafa}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:30px;padding:14px 22px;font-weight:800;cursor:pointer;transition:.2s}
+    .btn-primary{background:var(--coral);color:#fff}.btn-primary:hover{transform:translateY(-2px);filter:brightness(.97)}.btn-outline{border:1px solid #fff;color:#fff;background:transparent}
+    .section{padding:76px 22px}.container{max-width:1160px;margin:auto}.section-kicker{color:var(--turq);font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+    h2{font-size:clamp(30px,4vw,44px);color:var(--navy);margin:10px 0 12px}.intro{color:var(--muted);line-height:1.7;max-width:650px;margin:0 0 30px}
+    .tour-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.tour{border:1px solid #e3eeee;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 8px 28px #073b4c0c;display:flex;flex-direction:column}
+    .tour img{width:100%;height:205px;object-fit:cover;background:#d9eeee}.tour-body{padding:19px;display:flex;flex-direction:column;flex:1}.tour h3{margin:0 0 9px;color:var(--navy);font-size:19px}.tour p{margin:0 0 16px;color:var(--muted);line-height:1.55;font-size:14px;flex:1}
+    .price{font-weight:800;color:var(--blue);font-size:14px;margin-bottom:14px}.tour .btn{width:100%;padding:12px;background:var(--navy);color:#fff}
+    .about{background:var(--sand)}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}.about-photo{width:100%;height:390px;object-fit:cover;border-radius:22px}
+    .feature-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}.feature{background:white;border-radius:14px;padding:16px;font-weight:700;color:var(--navy);font-size:14px}
+    .contact{background:var(--navy);color:#fff;text-align:center}.contact h2{color:#fff}.contact p{color:#d3e9eb;line-height:1.7;max-width:600px;margin:0 auto 24px}
+    footer{background:#052d3a;color:#c8dfe1;padding:24px 22px;text-align:center;font-size:13px}.wa-float{position:fixed;right:20px;bottom:20px;z-index:20;background:#20c66b;color:white;border-radius:50px;padding:15px 19px;font-weight:900;box-shadow:0 8px 25px #0003}
+    @media(max-width:850px){nav{gap:12px;font-size:13px}.tour-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.about-photo{height:300px}}
+    @media(max-width:600px){.nav{flex-wrap:wrap}.brand{font-size:18px}nav{order:3;width:100%;justify-content:space-between;gap:8px}nav a{font-size:12px}.hero{min-height:540px}.hero-inner{padding-top:65px}.tour-grid{grid-template-columns:1fr}.section{padding:58px 18px}.feature-list{grid-template-columns:1fr 1fr}.wa-float{right:12px;bottom:12px;padding:13px 16px}}
+  </style>
+</head>
+<body>
+  <div class="topbar" data-es="🇵🇦 Vive Panamá · Tours y experiencias inolvidables" data-en="🇵🇦 Experience Panama · Unforgettable tours and adventures">🇵🇦 Vive Panamá · Tours y experiencias inolvidables</div>
+  <header><div class="nav">
+    <a class="brand" href="#">BM<span>PANAMA</span>TRIPS</a>
+    <nav><a href="#tours" data-es="Tours" data-en="Tours">Tours</a><a href="#nosotros" data-es="Nosotros" data-en="About us">Nosotros</a><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></nav>
+    <button class="lang" id="langBtn" type="button">EN</button>
+  </div></header>
+  <main>
+    <section class="hero"><div class="hero-inner">
+      <span class="eyebrow" data-es="Descubre Panamá con nosotros" data-en="Discover Panama with us">Descubre Panamá con nosotros</span>
+      <h1 data-es="Tu próxima aventura comienza aquí." data-en="Your next adventure starts here.">Tu próxima aventura comienza aquí.</h1>
+      <p data-es="Explora islas paradisíacas, cultura, historia y naturaleza. Creamos experiencias para que descubras lo mejor de Panamá." data-en="Explore paradise islands, culture, history and nature. We create experiences so you can discover the best of Panama.">Explora islas paradisíacas, cultura, historia y naturaleza. Creamos experiencias para que descubras lo mejor de Panamá.</p>
+      <div class="actions"><a class="btn btn-primary" href="#tours" data-es="Explorar tours" data-en="Explore tours">Explorar tours</a><a class="btn btn-outline" href="https://wa.me/50763528504" target="_blank" rel="noopener" data-es="Reservar por WhatsApp" data-en="Book on WhatsApp">Reservar por WhatsApp</a></div>
+    </div></section>
+    <section class="section" id="tours"><div class="container">
+      <div class="section-kicker" data-es="Experiencias para todos" data-en="Experiences for everyone">Experiencias para todos</div>
+      <h2 data-es="Nuestros tours" data-en="Our tours">Nuestros tours</h2>
+      <p class="intro" data-es="Elige tu próxima experiencia. Consulta disponibilidad y precios directamente por WhatsApp." data-en="Choose your next experience. Ask us about availability and prices directly on WhatsApp.">Elige tu próxima experiencia. Consulta disponibilidad y precios directamente por WhatsApp.</p>
+      <div class="tour-grid" id="tourGrid"></div>
+    </div></section>
+    <section class="section about" id="nosotros"><div class="container about-grid">
+      <div><div class="section-kicker" data-es="Conoce Panamá" data-en="Discover Panama">Conoce Panamá</div>
+        <h2 data-es="Panamá se vive, se siente y se descubre." data-en="Panama is meant to be experienced.">Panamá se vive, se siente y se descubre.</h2>
+        <p class="intro" data-es="En BMPANAMATRIPS queremos acompañarte a conocer los rincones más especiales de nuestro país. Desde la ciudad hasta las islas, disfruta cada recorrido a tu ritmo." data-en="At BMPANAMATRIPS, we want to help you discover the most special places in our country. From the city to the islands, enjoy every experience at your own pace.">En BMPANAMATRIPS queremos acompañarte a conocer los rincones más especiales de nuestro país. Desde la ciudad hasta las islas, disfruta cada recorrido a tu ritmo.</p>
+        <div class="feature-list"><div class="feature" data-es="🌴 Destinos increíbles" data-en="🌴 Amazing destinations">🌴 Destinos increíbles</div><div class="feature" data-es="📲 Reserva fácil" data-en="📲 Easy booking">📲 Reserva fácil</div><div class="feature" data-es="🌊 Mar y naturaleza" data-en="🌊 Sea and nature">🌊 Mar y naturaleza</div><div class="feature" data-es="🇵🇦 Experiencias locales" data-en="🇵🇦 Local experiences">🇵🇦 Experiencias locales</div></div>
+      </div>
+      <img class="about-photo" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85" alt="Mar tropical y playa">
+    </div></section>
+    <section class="section contact" id="contacto"><div class="container">
+      <div class="section-kicker" style="color:#72d8d1" data-es="¿Listo para viajar?" data-en="Ready to travel?">¿Listo para viajar?</div>
+      <h2 data-es="¡Hablemos de tu próxima aventura!" data-en="Let's plan your next adventure!">¡Hablemos de tu próxima aventura!</h2>
+      <p data-es="Escríbenos para consultar precios, fechas disponibles y detalles de cada experiencia. Te atenderemos por WhatsApp." data-en="Message us for prices, available dates and details about each experience. We'll assist you on WhatsApp.">Escríbenos para consultar precios, fechas disponibles y detalles de cada experiencia. Te atenderemos por WhatsApp.</p>
+      <a class="btn btn-primary" href="https://wa.me/50763528504" target="_blank" rel="noopener">WhatsApp: +507 6352-8504</a>
+    </div></section>
+  </main>
+  <footer>© <span id="year"></span> BMPANAMATRIPS · <span data-es="Turismo y experiencias en Panamá" data-en="Tours and experiences in Panama">Turismo y experiencias en Panamá</span></footer>
+  <a class="wa-float" href="https://wa.me/50763528504" target="_blank" rel="noopener">☏ WhatsApp</a>
+  <script>
+    const tours = [
+      {es:"City Tour",en:"City Tour",descEs:"Descubre los lugares emblemáticos y la energía de la ciudad de Panamá.",descEn:"Discover the iconic landmarks and vibrant energy of Panama City.",img:"https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=80"},
+      {es:"Tour Isla de los Monos",en:"Monkey Island Tour",descEs:"Conoce la fauna y los paisajes naturales del Lago Gatún.",descEn:"Discover wildlife and natural scenery at Gatun Lake.",img:"https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=900&q=80"},
+      {es:"Tour Comarca Emberá",en:"Embera Community Tour",descEs:"Acércate a las tradiciones, cultura y entorno natural de la comunidad Emberá.",descEn:"Experience the traditions, culture and natural surroundings of the Embera community.",img:"https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80"},
+      {es:"Tour Zona Libre de Colón",en:"Colon Free Zone Tour",descEs:"Conoce una de las zonas comerciales más importantes de la región.",descEn:"Visit one of the region's most important commercial zones.",img:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"},
+      {es:"Tour Portobelo",en:"Portobelo Tour",descEs:"Explora historia, fortificaciones y paisajes del Caribe panameño.",descEn:"Explore history, fortifications and the landscapes of the Panamanian Caribbean.",img:"https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"},
+      {es:"Safari Nocturno de Cocodrilos",en:"Night Crocodile Safari",descEs:"Vive una aventura nocturna de observación de fauna con guía.",descEn:"Enjoy a guided night wildlife-watching adventure.",img:"https://images.unsplash.com/photo-1564760055775-d63b17a55c44?auto=format&fit=crop&w=900&q=80"},
+      {es:"Pesca Recreativa",en:"Recreational Fishing",descEs:"Disfruta el mar y una jornada de pesca recreativa.",descEn:"Enjoy the sea and a recreational fishing experience.",img:"https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=900&q=80"},
+      {es:"SunSets por la Bahía de Panamá",en:"Panama Bay Sunsets",descEs:"Contempla los colores del atardecer y las vistas de la bahía.",descEn:"Take in sunset colors and beautiful views across the bay.",img:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"},
+      {es:"Tour Isla Taboga",en:"Taboga Island Tour",descEs:"Escápate a una isla encantadora para disfrutar del mar y sus paisajes.",descEn:"Escape to a charming island and enjoy the sea and scenery.",img:"https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"},
+      {es:"Tour Archipiélago de las Perlas",en:"Pearl Islands Archipelago Tour",descEs:"Descubre islas y aguas cristalinas en el Pacífico panameño.",descEn:"Discover islands and crystal-clear waters in the Panamanian Pacific.",img:"https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=900&q=80"}
+    ];
+    let lang="es";
+    const grid=document.getElementById("tourGrid");
+    function renderTours(){grid.innerHTML=tours.map(t=>{const name=t[lang],desc=lang==="es"?t.descEs:t.descEn;const msg=encodeURIComponent((lang==="es"?"Hola, deseo consultar precio y disponibilidad para: ":"Hello, I'd like to ask about price and availability for: ")+name+".");return `<article class="tour"><img src="${t.img}" alt="${name}" loading="lazy"><div class="tour-body"><h3>${name}</h3><p>${desc}</p><div class="price">${lang==="es"?"Precio: consultar por WhatsApp":"Price: ask on WhatsApp"}</div><a class="btn" href="https://wa.me/50763528504?text=${msg}" target="_blank" rel="noopener">${lang==="es"?"Consultar y reservar":"Ask & book"}</a></div></article>`}).join("")}
+    document.getElementById("langBtn").addEventListener("click",()=>{lang=lang==="es"?"en":"es";document.documentElement.lang=lang;document.querySelectorAll("[data-es]").forEach(el=>el.textContent=el.dataset[lang]);document.getElementById("langBtn").textContent=lang==="es"?"EN":"ES";renderTours()});
+    document.getElementById("year").textContent=new Date().getFullYear();renderTours();
+  </script>
+</body>
+</html>
