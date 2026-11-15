@@ -1,3 +1,9 @@
+¡Lo has agregado excelente! La estructura de los corchetes, las comas y los nombres de las imágenes de Transporte Privado quedaron perfectos.
+Solo hay un pequeñísimo detalle de una sola letra al final de todo el código que te sugiero corregir para que el archivo HTML quede completamente cerrado sin errores:
+En la última línea, te falta cerrar el corchete angular > de la etiqueta final:
+ * Cómo lo tienes: </html
+ * Cómo debe quedar: </html>
+Aquí tienes el bloque completo del código ya corregido con ese último detalle listo para que lo copies, lo pegues en tu aplicación, lo guardes y veas tu página funcionando al 100%:
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +20,7 @@
     .brand{font-weight:900;letter-spacing:1px;color:var(--navy);font-size:21px}.brand span{color:var(--turq)}
     nav{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:700}nav a:hover{color:var(--turq)}
     .lang{border:1px solid #c9dddd;background:white;border-radius:20px;padding:8px 12px;font-weight:700;cursor:pointer;color:var(--navy)}
-    .hero{min-height:570px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(3,38,52,.82),rgba(3,38,52,.25)),url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=2000&q=85') center/cover}
+    .hero{min-height:570px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(3,38,52,.82),rgba(3,38,52,.25)),url('citytour.jpg') center/cover}
     .hero-inner{max-width:1160px;margin:auto;padding:80px 22px;width:100%}.eyebrow{display:inline-block;background:#ffffff20;border:1px solid #ffffff70;padding:8px 13px;border-radius:30px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
     h1{font-size:clamp(42px,7vw,76px);line-height:1.02;max-width:720px;margin:22px 0 18px}.hero p{font-size:18px;line-height:1.65;max-width:570px;color:#edfafa}
     .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:30px;padding:14px 22px;font-weight:800;cursor:pointer;transition:.2s}
@@ -22,7 +28,15 @@
     .section{padding:76px 22px}.container{max-width:1160px;margin:auto}.section-kicker{color:var(--turq);font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
     h2{font-size:clamp(30px,4vw,44px);color:var(--navy);margin:10px 0 12px}.intro{color:var(--muted);line-height:1.7;max-width:650px;margin:0 0 30px}
     .tour-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.tour{border:1px solid #e3eeee;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 8px 28px #073b4c0c;display:flex;flex-direction:column}
-    .tour img{width:100%;height:205px;object-fit:cover;background:#d9eeee}.tour-body{padding:19px;display:flex;flex-direction:column;flex:1}.tour h3{margin:0 0 9px;color:var(--navy);font-size:19px}.tour p{margin:0 0 16px;color:var(--muted);line-height:1.55;font-size:14px;flex:1}
+    .tour-img-container{position:relative;width:100%;height:205px;background:#d9eeee;overflow:hidden}
+    .tour-img-container img{width:100%;height:100%;object-fit:cover}
+    .tour-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:white;border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;font-weight:bold;display:flex;align-items:center;justify-content:center;transition:background 0.2s;z-index:2}
+    .tour-arrow:hover{background:rgba(0,0,0,0.8)}
+    .tour-arrow.prev{left:8px} .tour-arrow.next{right:8px}
+    .tour-dots{position:absolute;bottom:8px;left:0;right:0;text-align:center;z-index:2}
+    .tour-dot{display:inline-block;width:6px;height:6px;margin:0 2px;border-radius:50%;background:rgba(255,255,255,0.5);transition:background 0.2s}
+    .tour-dot.active{background:white}
+    .tour-body{padding:19px;display:flex;flex-direction:column;flex:1}.tour h3{margin:0 0 9px;color:var(--navy);font-size:19px}.tour p{margin:0 0 16px;color:var(--muted);line-height:1.55;font-size:14px;flex:1}
     .price{font-weight:800;color:var(--blue);font-size:14px;margin-bottom:14px}.tour .btn{width:100%;padding:12px;background:var(--navy);color:#fff}
     .about{background:var(--sand)}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}.about-photo{width:100%;height:390px;object-fit:cover;border-radius:22px}
     .feature-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}.feature{background:white;border-radius:14px;padding:16px;font-weight:700;color:var(--navy);font-size:14px}
@@ -58,7 +72,7 @@
         <p class="intro" data-es="En BMPANAMATRIPS queremos acompañarte a conocer los rincones más especiales de nuestro país. Desde la ciudad hasta las islas, disfruta cada recorrido a tu ritmo." data-en="At BMPANAMATRIPS, we want to help you discover the most special places in our country. From the city to the islands, enjoy every experience at your own pace.">En BMPANAMATRIPS queremos acompañarte a conocer los rincones más especiales de nuestro país. Desde la ciudad hasta las islas, disfruta cada recorrido a tu ritmo.</p>
         <div class="feature-list"><div class="feature" data-es="🌴 Destinos increíbles" data-en="🌴 Amazing destinations">🌴 Destinos increíbles</div><div class="feature" data-es="📲 Reserva fácil" data-en="📲 Easy booking">📲 Reserva fácil</div><div class="feature" data-es="🌊 Mar y naturaleza" data-en="🌊 Sea and nature">🌊 Mar y naturaleza</div><div class="feature" data-es="🇵🇦 Experiencias locales" data-en="🇵🇦 Local experiences">🇵🇦 Experiencias locales</div></div>
       </div>
-      <img class="about-photo" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85" alt="Mar tropical y playa">
+      <img class="about-photo" src="portobelo.jpg" alt="Mar tropical y playa">
     </div></section>
     <section class="section contact" id="contacto"><div class="container">
       <div class="section-kicker" style="color:#72d8d1" data-es="¿Listo para viajar?" data-en="Ready to travel?">¿Listo para viajar?</div>
@@ -71,22 +85,130 @@
   <a class="wa-float" href="https://wa.me/50763528504" target="_blank" rel="noopener">☏ WhatsApp</a>
   <script>
     const tours = [
-      {es:"City Tour",en:"City Tour",descEs:"Descubre los lugares emblemáticos y la energía de la ciudad de Panamá.",descEn:"Discover the iconic landmarks and vibrant energy of Panama City.",img:"https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=80"},
-      {es:"Tour Isla de los Monos",en:"Monkey Island Tour",descEs:"Conoce la fauna y los paisajes naturales del Lago Gatún.",descEn:"Discover wildlife and natural scenery at Gatun Lake.",img:"https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=900&q=80"},
-      {es:"Tour Comarca Emberá",en:"Embera Community Tour",descEs:"Acércate a las tradiciones, cultura y entorno natural de la comunidad Emberá.",descEn:"Experience the traditions, culture and natural surroundings of the Embera community.",img:"https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80"},
-      {es:"Tour Zona Libre de Colón",en:"Colon Free Zone Tour",descEs:"Conoce una de las zonas comerciales más importantes de la región.",descEn:"Visit one of the region's most important commercial zones.",img:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"},
-      {es:"Tour Portobelo",en:"Portobelo Tour",descEs:"Explora historia, fortificaciones y paisajes del Caribe panameño.",descEn:"Explore history, fortifications and the landscapes of the Panamanian Caribbean.",img:"https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"},
-      {es:"Safari Nocturno de Cocodrilos",en:"Night Crocodile Safari",descEs:"Vive una aventura nocturna de observación de fauna con guía.",descEn:"Enjoy a guided night wildlife-watching adventure.",img:"https://images.unsplash.com/photo-1564760055775-d63b17a55c44?auto=format&fit=crop&w=900&q=80"},
-      {es:"Pesca Recreativa",en:"Recreational Fishing",descEs:"Disfruta el mar y una jornada de pesca recreativa.",descEn:"Enjoy the sea and a recreational fishing experience.",img:"https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=900&q=80"},
-      {es:"SunSets por la Bahía de Panamá",en:"Panama Bay Sunsets",descEs:"Contempla los colores del atardecer y las vistas de la bahía.",descEn:"Take in sunset colors and beautiful views across the bay.",img:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"},
-      {es:"Tour Isla Taboga",en:"Taboga Island Tour",descEs:"Escápate a una isla encantadora para disfrutar del mar y sus paisajes.",descEn:"Escape to a charming island and enjoy the sea and scenery.",img:"https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"},
-      {es:"Tour Archipiélago de las Perlas",en:"Pearl Islands Archipelago Tour",descEs:"Descubre islas y aguas cristalinas en el Pacífico panameño.",descEn:"Discover islands and crystal-clear waters in the Panamanian Pacific.",img:"https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=900&q=80"}
+      {
+        es: "City Tour", en: "City Tour",
+        descEs: "Descubre los lugares emblemáticos y la energía de la ciudad de Panamá.",
+        descEn: "Discover the iconic landmarks and vibrant energy of Panama City.",
+        images: ["citytour.jpg", "citytour2.jpg", "citytour3.jpg", "citytour4.jpg"]
+      },
+      {
+        es: "Tour Isla de los Monos", en: "Monkey Island Tour",
+        descEs: "Conoce la fauna y los paisajes naturales del Lago Gatún.",
+        descEn: "Discover wildlife and natural scenery at Gatun Lake.",
+        images: ["monos.jpg"]
+      },
+      {
+        es: "Tour Comarca Emberá", en: "Embera Community Tour",
+        descEs: "Acércate a las tradiciones, cultura y entorno natural de la comunidad Emberá.",
+        descEn: "Experience the traditions, culture and natural surroundings of the Embera community.",
+        images: ["embera.jpg", "embera2.jpg"]
+      },
+      {
+        es: "Tour Zona Libre de Colón", en: "Colon Free Zone Tour",
+        descEs: "Conoce una de las zonas comerciales más importantes de la región.",
+        descEn: "Visit one of the region's most important commercial zones.",
+        images: ["Zonalibre.jpg"]
+      },
+      {
+        es: "Tour Portobelo", en: "Portobelo Tour",
+        descEs: "Explora historia, fortificaciones y paisajes del Caribe panameño.",
+        descEn: "Explore history, fortifications and the landscapes of the Panamanian Caribbean.",
+        images: ["portobelo.jpg", "portobelo1.jpg"]
+      },
+      {
+        es: "Safari Nocturno de Cocodrilos", en: "Night Crocodile Safari",
+        descEs: "Vive una aventura nocturna de observación de fauna con guía.",
+        descEn: "Enjoy a guided night wildlife-watching adventure.",
+        images: ["Safarinocturno.jpg"]
+      },
+      {
+        es: "Pesca Recreativa", en: "Recreational Fishing",
+        descEs: "Disfruta el mar y una jornada de pesca recreativa.",
+        descEn: "Enjoy the sea and a recreational fishing experience.",
+        images: ["pesca.jpg"]
+      },
+      {
+        es: "SunSets por la Bahía de Panamá", en: "Panama Bay Sunsets",
+        descEs: "Contempla los colores del atardecer y las vistas de la bahía.",
+        descEn: "Take in sunset colors and beautiful views across the bay.",
+        images: ["Sunsets.jpg", "sunset2.jpg", "sunset3.jpg", "sunset4.jpg"]
+      },
+      {
+        es: "Tour Isla Taboga", en: "Taboga Island Tour",
+        descEs: "Escápate a una isla encantadora para disfrutar del mar y sus paisajes.",
+        descEn: "Escape to a charming island and enjoy the sea and scenery.",
+        images: ["Taboga.jpg", "taboga2.jpg"]
+      },
+      {
+        es: "Tour Archipiélago de las Perlas", en: "Pearl Islands Archipelago Tour",
+        descEs: "Descubre islas y aguas cristalinas en el Pacífico panameño.",
+        descEn: "Discover islands and crystal-clear waters in the Panamanian Pacific.",
+        images: ["archipielago.jpg", "archipielago2.jpg", "archipiélago3.jpg", "archipiélago4.jpg"]
+      },
+      {
+        es: "Transporte Privado", en: "Private Transport",
+        descEs: "Te ofrecemos transporte privado y seguro. Descubre la ciudad de Panamá con nosotros.",
+        descEn: "We offer you safe, private transportation. Discover Panama City with us.",
+        images: ["transporteprivado.jpg", "transporteprivado1.jpg"]
+      }
     ];
-    let lang="es";
-    const grid=document.getElementById("tourGrid");
-    function renderTours(){grid.innerHTML=tours.map(t=>{const name=t[lang],desc=lang==="es"?t.descEs:t.descEn;const msg=encodeURIComponent((lang==="es"?"Hola, deseo consultar precio y disponibilidad para: ":"Hello, I'd like to ask about price and availability for: ")+name+".");return `<article class="tour"><img src="${t.img}" alt="${name}" loading="lazy"><div class="tour-body"><h3>${name}</h3><p>${desc}</p><div class="price">${lang==="es"?"Precio: consultar por WhatsApp":"Price: ask on WhatsApp"}</div><a class="btn" href="https://wa.me/50763528504?text=${msg}" target="_blank" rel="noopener">${lang==="es"?"Consultar y reservar":"Ask & book"}</a></div></article>`}).join("")}
-    document.getElementById("langBtn").addEventListener("click",()=>{lang=lang==="es"?"en":"es";document.documentElement.lang=lang;document.querySelectorAll("[data-es]").forEach(el=>el.textContent=el.dataset[lang]);document.getElementById("langBtn").textContent=lang==="es"?"EN":"ES";renderTours()});
-    document.getElementById("year").textContent=new Date().getFullYear();renderTours();
+
+    let lang = "es";
+    let tourImageIndices = {};
+
+    function changeImg(tourIndex, direction, totalImages) {
+      if (!tourImageIndices[tourIndex]) tourImageIndices[tourIndex] = 0;
+      tourImageIndices[tourIndex] = (tourImageIndices[tourIndex] + direction + totalImages) % totalImages;
+      renderTours();
+    }
+
+    const grid = document.getElementById("tourGrid");
+
+    function renderTours() {
+      grid.innerHTML = tours.map((t, index) => {
+        const name = t[lang], desc = lang === "es" ? t.descEs : t.descEn;
+        const msg = encodeURIComponent((lang === "es" ? "Hola, deseo consultar precio y disponibilidad para: " : "Hello, I'd like to ask about price and availability for: ") + name + ".");
+        
+        const images = t.images;
+        const currentImgIdx = tourImageIndices[index] || 0;
+        const currentImg = images[currentImgIdx];
+
+        let imageHtml = `<div class="tour-img-container">
+          <img src="${currentImg}" alt="${name}" loading="lazy">`;
+
+        if (images.length > 1) {
+          imageHtml += `
+            <button class="tour-arrow prev" onclick="changeImg(${index}, -1, ${images.length})">‹</button>
+            <button class="tour-arrow next" onclick="changeImg(${index}, 1, ${images.length})">›</button>
+            <div class="tour-dots">
+              ${images.map((_, i) => `<span class="tour-dot ${i === currentImgIdx ? 'active' : ''}"></span>`).join('')}
+            </div>
+          `;
+        }
+        imageHtml += `</div>`;
+
+        return `<article class="tour">
+          ${imageHtml}
+          <div class="tour-body">
+            <h3>${name}</h3>
+            <p>${desc}</p>
+            <div class="price">${lang === "es" ? "Precio: consultar por WhatsApp" : "Price: ask on WhatsApp"}</div>
+            <a class="btn" href="https://wa.me/50763528504?text=${msg}" target="_blank" rel="noopener">${lang === "es" ? "Consultar y reservar" : "Ask & book"}</a>
+          </div>
+        </article>`;
+      }).join("");
+    }
+
+    document.getElementById("langBtn").addEventListener("click", () => {
+      lang = lang === "es" ? "en" : "es";
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-es]").forEach(el => el.textContent = el.dataset[lang]);
+      document.getElementById("langBtn").textContent = lang === "es" ? "EN" : "ES";
+      renderTours();
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderTours();
   </script>
 </body>
 </html>
