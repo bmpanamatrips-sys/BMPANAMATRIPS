@@ -38,7 +38,7 @@
 
     /* CARRUSEL HORIZONTAL DE YATES */
     .yacht-slider-wrapper{position:relative}
-    .yacht-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px 4px 24px;scrollbar-width:none;-ms-overflow-style:none;min-height:620px}
+    .yacht-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px 4px 24px;scrollbar-width:none;-ms-overflow-style:none;min-height:520px}
     .yacht-track::-webkit-scrollbar{display:none}
     .yacht-slide{flex:0 0 calc(50% - 12px);min-width:340px;scroll-snap-align:start;display:flex}
 
@@ -47,15 +47,15 @@
     .fleet-dot.active{background:var(--navy);width:26px;border-radius:10px}
 
     /* ESTADOS DE CARGA Y RESPALDO PARA EVITAR SALTOS O HUECOS EN BLANCO */
-    .loading-placeholder{width:100%;min-height:360px;border:1px dashed #c7dfdf;border-radius:20px;background:#ffffffb8;color:var(--navy);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
-    .fallback-box{width:100%;min-height:280px;border:1px solid #dceaea;border-radius:20px;background:#fff;color:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:28px;text-align:center}
+    .loading-placeholder{width:100%;min-height:320px;border:1px dashed #c7dfdf;border-radius:20px;background:#ffffffb8;color:var(--navy);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
+    .fallback-box{width:100%;min-height:260px;border:1px solid #dceaea;border-radius:20px;background:#fff;color:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:28px;text-align:center}
     .fallback-box p{margin:0;color:var(--muted);max-width:460px;line-height:1.55}
 
     /* TARJETAS */
     .card{width:100%;border:1px solid #dceaea;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(7,59,76,.07);display:flex;flex-direction:column}
 
     /* CARRUSEL INTERNO DE FOTOS Y VIDEOS */
-    .carousel-wrapper{position:relative;width:100%;height:265px;background:#0a262e;overflow:hidden}
+    .carousel-wrapper{position:relative;width:100%;height:245px;background:#0a262e;overflow:hidden}
     .carousel-track{display:flex;width:100%;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none}
     .carousel-track::-webkit-scrollbar{display:none}
     .carousel-slide{flex:0 0 100%;width:100%;height:100%;scroll-snap-align:start;position:relative;background:#0a262e}
@@ -71,43 +71,43 @@
     .carousel-dot.active{background:#fff;width:18px;border-radius:10px}
 
     /* CONTENIDO FICHA TÉCNICA */
-    .card-body{padding:24px;display:flex;flex-direction:column;flex:1}
-    .yacht-top-row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px;flex-wrap:wrap}
-    .card h3{margin:0;color:var(--navy);font-size:22px;line-height:1.2}
+    .card-body{padding:20px;display:flex;flex-direction:column;flex:1}
+    .yacht-top-row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+    .card h3{margin:0;color:var(--navy);font-size:21px;line-height:1.2}
     .capacity-tag{background:#e3f5f4;color:var(--navy);font-size:12px;font-weight:800;padding:5px 11px;border-radius:20px;white-space:nowrap;border:1px solid #bfe3e1}
-    .marina-line{font-size:13.5px;color:var(--blue);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px}
-    .card-desc{margin:0 0 15px;color:var(--muted);line-height:1.58;font-size:14px}
+    .marina-line{font-size:13px;color:var(--blue);font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+    .card-desc{margin:0 0 12px;color:var(--muted);line-height:1.5;font-size:13.8px}
 
-    .detail-box{border-top:1px solid #eaf2f2;padding-top:12px;margin-bottom:14px}
-    .detail-title{font-size:11.5px;font-weight:900;text-transform:uppercase;letter-spacing:.9px;color:var(--navy);margin-bottom:8px}
-    .includes-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:5px;font-size:13px;color:var(--ink)}
-    .includes-list li{display:flex;align-items:flex-start;gap:7px;line-height:1.38}
+    .detail-box{border-top:1px solid #eaf2f2;padding-top:10px;margin-bottom:12px}
+    .detail-title{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.9px;color:var(--navy);margin-bottom:6px}
+    .includes-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:4px;font-size:12.8px;color:var(--ink)}
+    .includes-list li{display:flex;align-items:flex-start;gap:7px;line-height:1.35}
     .includes-list li::before{content:"✓";color:var(--turq);font-weight:900;flex-shrink:0}
 
-    .excludes-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:4px;font-size:12.8px;color:#5f7276}
-    .excludes-list li{display:flex;align-items:flex-start;gap:7px;line-height:1.35}
-    .excludes-list li::before{content:"✕";color:#d9534f;font-weight:900;font-size:11.5px;flex-shrink:0;margin-top:1px}
+    .excludes-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:4px;font-size:12.5px;color:#5f7276}
+    .excludes-list li{display:flex;align-items:flex-start;gap:7px;line-height:1.32}
+    .excludes-list li::before{content:"✕";color:#d9534f;font-weight:900;font-size:11px;flex-shrink:0;margin-top:1px}
 
-    .places-pills{display:flex;flex-wrap:wrap;gap:6px}
-    .place-pill{background:var(--bg-light);border:1px solid #d5ebeb;color:var(--navy);font-size:12px;font-weight:700;padding:5px 10px;border-radius:9px}
+    .places-pills{display:flex;flex-wrap:wrap;gap:5px}
+    .place-pill{background:var(--bg-light);border:1px solid #d5ebeb;color:var(--navy);font-size:11.8px;font-weight:700;padding:4px 9px;border-radius:9px}
 
-    .note-box{background:var(--warn-bg);border:1px solid var(--warn-border);border-radius:11px;padding:10px 12px;font-size:12.5px;color:#5a4621;line-height:1.45;margin-bottom:14px}
-    .note-box strong{color:#3c2d12;display:block;margin-bottom:3px}
+    .note-box{background:var(--warn-bg);border:1px solid var(--warn-border);border-radius:11px;padding:9px 11px;font-size:12.2px;color:#5a4621;line-height:1.4;margin-bottom:12px}
+    .note-box strong{color:#3c2d12;display:block;margin-bottom:2px}
 
-    .tours-avail-box{background:var(--bg-light);border:1px solid #dceaea;border-radius:14px;padding:12px 14px;margin-bottom:16px}
-    .tours-pills{display:flex;flex-wrap:wrap;gap:7px}
-    .tour-pill{background:#fff;border:1px solid #cce3e3;color:var(--navy);font-size:12.5px;font-weight:700;padding:6px 11px;border-radius:10px}
+    .tours-avail-box{background:var(--bg-light);border:1px solid #dceaea;border-radius:13px;padding:10px 12px;margin-bottom:14px}
+    .tours-pills{display:flex;flex-wrap:wrap;gap:6px}
+    .tour-pill{background:#fff;border:1px solid #cce3e3;color:var(--navy);font-size:12px;font-weight:700;padding:5px 10px;border-radius:10px}
 
-    .price-cta-box{margin-top:auto;border-top:1px solid #eaf2f2;padding-top:16px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .price-cta-box{margin-top:auto;border-top:1px solid #eaf2f2;padding-top:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
     .price-block{display:flex;flex-direction:column}
-    .price-label{font-size:11.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:700}
-    .price-amount{font-size:20px;font-weight:900;color:var(--navy)}
-    .price-amount small{font-size:13px;font-weight:700;color:var(--blue)}
-    .btn-book-yacht{background:var(--coral);color:#fff;padding:13px 20px;border-radius:30px;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center;transition:.2s;flex:1;min-width:165px}
+    .price-label{font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:700}
+    .price-amount{font-size:19px;font-weight:900;color:var(--navy)}
+    .price-amount small{font-size:12.5px;font-weight:700;color:var(--blue)}
+    .btn-book-yacht{background:var(--coral);color:#fff;padding:12px 18px;border-radius:30px;font-weight:800;font-size:13.8px;display:inline-flex;align-items:center;justify-content:center;transition:.2s;flex:1;min-width:155px}
     .btn-book-yacht:hover{filter:brightness(.95);transform:translateY(-1px)}
 
     /* GRID DE TOURS EN TIERRA */
-    .tour-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;min-height:520px}
+    .tour-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;min-height:460px}
     .card .btn-main{width:100%;padding:13px;background:var(--navy);color:#fff;font-size:14.5px;margin-top:auto}
     .card .btn-main:hover{background:var(--blue)}
 
@@ -123,7 +123,7 @@
     footer{background:#052d3a;color:#c8dfe1;padding:24px 22px;text-align:center;font-size:13px}.wa-float{position:fixed;right:20px;bottom:20px;z-index:20;background:#20c66b;color:white;border-radius:50px;padding:15px 19px;font-weight:900;box-shadow:0 8px 25px #0003}
     
     @media(max-width:960px){.yacht-slide{flex:0 0 88%}.tour-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.about-photo{height:300px}}
-    @media(max-width:640px){.nav{flex-wrap:wrap}.brand{font-size:18px}nav{order:3;width:100%;justify-content:space-between;gap:6px}nav a{font-size:11px}.yacht-slide{flex:0 0 92%;min-width:290px}.yacht-track{min-height:560px}.carousel-wrapper{height:230px}.section{padding:58px 18px}.wa-float{right:12px;bottom:12px;padding:13px 16px}}
+    @media(max-width:640px){.nav{flex-wrap:wrap}.brand{font-size:18px}nav{order:3;width:100%;justify-content:space-between;gap:6px}nav a{font-size:11px}.yacht-slide{flex:0 0 92%;min-width:290px}.yacht-track{min-height:480px}.carousel-wrapper{height:215px}.section{padding:58px 18px}.wa-float{right:12px;bottom:12px;padding:13px 16px}}
   </style>
 </head>
 <body>
@@ -157,7 +157,7 @@
         <div>
           <div class="section-kicker" data-es="Flota Privada en Panamá" data-en="Private Fleet in Panama">Flota Privada en Panamá</div>
           <h2 data-es="Flota de Embarcaciones Disponible" data-en="Available Vessel Fleet">Flota de Embarcaciones Disponible</h2>
-          <p class="intro" data-es="Desliza hacia la derecha para ver nuestras 6 embarcaciones, sus amenidades incluidas, tours disponibles y tarifas." data-en="Swipe right to explore our 6 vessels, included amenities, available tours, and rates.">Desliza hacia la derecha para ver nuestras 6 embarcaciones, sus amenidades incluidas, tours disponibles y tarifas.</p>
+          <p class="intro" data-es="Desliza hacia la derecha para ver nuestras 6 embarcaciones, capacidad de pasajeros, amenidades incluidas, tours disponibles y tarifas." data-en="Swipe right to explore our 6 vessels, passenger capacity, included amenities, available tours, and rates.">Desliza hacia la derecha para ver nuestras 6 embarcaciones, capacidad de pasajeros, amenidades incluidas, tours disponibles y tarifas.</p>
         </div>
         <div class="fleet-controls">
           <button class="fleet-nav-btn" type="button" aria-label="Anterior" onclick="scrollFleet(-1)">‹</button>
@@ -177,7 +177,7 @@
     <section class="section" id="tours"><div class="container">
       <div class="section-kicker" data-es="Experiencias en tierra y naturaleza" data-en="Land & nature experiences">Experiencias en tierra y naturaleza</div>
       <h2 data-es="Nuestros Tours y Transporte Privado" data-en="Our Tours & Private Transport">Nuestros Tours y Transporte Privado</h2>
-      <p class="intro" data-es="Conoce los detalles, lugares a visitar, inclusiones y recomendaciones de cada tour. Cotiza o reserva directamente por WhatsApp." data-en="Check details, places to visit, inclusions, and recommendations for each tour. Quote or book directly on WhatsApp.">Conoce los detalles, lugares a visitar, inclusiones y recomendaciones de cada tour. Cotiza o reserva directamente por WhatsApp.</p>
+      <p class="intro" data-es="Revisa capacidad, detalles, lugares a visitar, inclusiones y recomendaciones de cada tour. Cotiza o reserva directamente por WhatsApp." data-en="Check capacity, details, places to visit, inclusions, and recommendations for each tour. Quote or book directly on WhatsApp.">Revisa capacidad, detalles, lugares a visitar, inclusiones y recomendaciones de cada tour. Cotiza o reserva directamente por WhatsApp.</p>
       <div class="tour-grid" id="tourGrid">
         <div class="loading-placeholder" data-es="Cargando tours y transporte privado..." data-en="Loading tours and private transport...">Cargando tours y transporte privado...</div>
       </div>
@@ -200,10 +200,11 @@
     <section class="section contact" id="contacto"><div class="container">
       <div class="section-kicker" style="color:#72d8d1" data-es="¿Listo para viajar?" data-en="Ready to travel?">¿Listo para viajar?</div>
       <h2 data-es="¡Hablemos de tu próxima aventura!" data-en="Let's plan your next adventure!">¡Hablemos de tu próxima aventura!</h2>
-      <p data-es="Escríbenos para consultar precios, fechas disponibles y detalles de cada experiencia. Te atenderemos por WhatsApp o Instagram." data-en="Message us for prices, available dates and details about each experience. We'll assist you on WhatsApp or Instagram.">Escríbenos para consultar precios, fechas disponibles y detalles de cada experiencia. Te atenderemos por WhatsApp o Instagram.</p>
+      <p data-es="Escríbenos para consultar precios, fechas disponibles y detalles de cada experiencia. Te atenderemos por WhatsApp, correo o Instagram." data-en="Message us for prices, available dates and details about each experience. We'll assist you on WhatsApp, email or Instagram.">Escríbenos para consultar precios, fechas disponibles y detalles de cada experiencia. Te atenderemos por WhatsApp, correo o Instagram.</p>
       
       <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
         <a class="btn btn-primary" href="https://wa.me/50763528504" target="_blank" rel="noopener">WhatsApp: +507 6352-8504</a>
+        <a class="btn btn-outline" href="mailto:bmpanamatrips@gmail.com">✉️ bmpanamatrips@gmail.com</a>
         <a class="btn" href="https://www.instagram.com/bmpanamatrips?psln=MXh2ZTY4cHlyYzFmYw==" target="_blank" rel="noopener" style="background: #E1306C; color: white;">Instagram: @bmpanamatrips</a>
       </div>
     </div></section>
@@ -215,14 +216,14 @@
     <img id="lightboxImg" src="" alt="Vista ampliada">
   </div>
 
-  <footer>© <span id="year">2026</span> BMPANAMATRIPS · <span data-es="Turismo y experiencias en Panamá" data-en="Tours and experiences in Panama">Turismo y experiencias en Panamá</span></footer>
+  <footer>© <span id="year">2026</span> BMPANAMATRIPS · <a href="mailto:bmpanamatrips@gmail.com">bmpanamatrips@gmail.com</a> · <span data-es="Turismo y experiencias en Panamá" data-en="Tours and experiences in Panama">Turismo y experiencias en Panamá</span></footer>
   <a class="wa-float" href="https://wa.me/50763528504" target="_blank" rel="noopener">☏ WhatsApp</a>
 
   <script>
     const WA_PHONE = "50763528504";
 
     // =========================================================================
-    // 1. LOS 6 YATES / CATAMARANES (DESLIZABLES A LA DERECHA)
+    // 1. LOS 6 YATES / CATAMARANES (TEXTOS OPTIMIZADOS + CAPACIDAD VISIBLE)
     // =========================================================================
     const yachts = [
       {
@@ -232,33 +233,35 @@
         badgeEn: "Private Yacht",
         capacityEs: "Hasta 13 pasajeros",
         capacityEn: "Up to 13 passengers",
-        marinaEs: "Salida: Flamenco Marina, Amador Causeway",
-        marinaEn: "Departure: Flamenco Marina, Amador Causeway",
-        descEs: "Este Yate tiene capacidad para 13 pasajeros.",
-        descEn: "This yacht has capacity for 13 passengers.",
+        marinaEs: "Salida: Flamenco Marina, Amador",
+        marinaEn: "Departure: Flamenco Marina, Amador",
+        descEs: "Comodidad y privacidad para grupos pequeños en la bahía o islas.",
+        descEn: "Comfort and privacy for small groups in the bay or islands.",
         includesEs: [
-          "Nevera con hielo", "Agua", "Kit de BBQ a Gas", "Piscina flotante",
-          "Colchoneta flotante", "Flotadores", "Música Bluetooth", "A/C",
-          "Una Recámara", "Un Baño", "Comedor", "Tripulación",
-          "Tasas portuarias", "Dinghy"
+          "Nevera con hielo y agua",
+          "Kit de BBQ a gas y comedor",
+          "Piscina, colchoneta y flotadores",
+          "A/C, 1 recámara, 1 baño y música Bluetooth",
+          "Tripulación, dinghy y tasas portuarias"
         ],
         includesEn: [
-          "Cooler with ice", "Water", "Gas BBQ Kit", "Floating pool",
-          "Floating mat", "Floats", "Bluetooth music", "A/C",
-          "1 Bedroom", "1 Bathroom", "Dining area", "Crew",
-          "Port fees", "Dinghy"
+          "Cooler with ice and water",
+          "Gas BBQ kit and dining area",
+          "Floating pool, mat and floats",
+          "A/C, 1 bedroom, 1 bathroom & Bluetooth music",
+          "Crew, dinghy and port fees"
         ],
         toursEs: [
-          "Bahía de Panamá (4 Horas)",
-          "Isla Taboga (8 Horas)",
-          "Isla Contadora (9 Horas)",
-          "Pesca Recreativa (8 Horas)"
+          "Bahía de Panamá (4h)",
+          "Isla Taboga (8h)",
+          "Isla Contadora (9h)",
+          "Pesca Recreativa (8h)"
         ],
         toursEn: [
-          "Panama Bay (4 Hours)",
-          "Taboga Island (8 Hours)",
-          "Contadora Island (9 Hours)",
-          "Recreational Fishing (8 Hours)"
+          "Panama Bay (4h)",
+          "Taboga Island (8h)",
+          "Contadora Island (9h)",
+          "Recreational Fishing (8h)"
         ],
         priceFrom: "$850.00",
         images: ["seazure.jpg", "seazure1.jpg", "seazure2.jpg", "seazure3.jpg", "seazure4.jpg", "seazure5.jpg"]
@@ -272,29 +275,31 @@
         capacityEn: "Up to 16 passengers",
         marinaEs: "Salida: Amador / Balboa Yacht Club",
         marinaEn: "Departure: Amador / Balboa Yacht Club",
-        descEs: "Este Yate tiene capacidad para 16 pasajeros.",
-        descEn: "This yacht has capacity for 16 passengers.",
+        descEs: "Amplio espacio exterior e interior ideal para pasadías y celebraciones.",
+        descEn: "Spacious indoor and outdoor areas ideal for day trips and celebrations.",
         includesEs: [
-          "Nevera con hielo", "Kit de BBQ a Gas (sin cocinero)", "Piscina flotante",
-          "Colchoneta flotante", "Flotadores", "Música Bluetooth", "A/C",
-          "Una Recámara", "Un Baño", "Comedor", "Tripulación",
-          "Tasas portuarias", "Dinghy"
+          "Nevera con hielo",
+          "Kit de BBQ a gas (sin cocinero) y comedor",
+          "Piscina, colchoneta y flotadores",
+          "A/C, 1 recámara, 1 baño y música Bluetooth",
+          "Tripulación, dinghy y tasas portuarias"
         ],
         includesEn: [
-          "Cooler with ice", "Gas BBQ Kit (no chef)", "Floating pool",
-          "Floating mat", "Floats", "Bluetooth music", "A/C",
-          "1 Bedroom", "1 Bathroom", "Dining area", "Crew",
-          "Port fees", "Dinghy"
+          "Cooler with ice",
+          "Gas BBQ kit (no chef) and dining area",
+          "Floating pool, mat and floats",
+          "A/C, 1 bedroom, 1 bathroom & Bluetooth music",
+          "Crew, dinghy and port fees"
         ],
         toursEs: [
-          "Bahía de Panamá (3 Horas)",
-          "Isla Taboga (8 Horas)",
-          "Isla Contadora (9 Horas)"
+          "Bahía de Panamá (3h)",
+          "Isla Taboga (8h)",
+          "Isla Contadora (9h)"
         ],
         toursEn: [
-          "Panama Bay (3 Hours)",
-          "Taboga Island (8 Hours)",
-          "Contadora Island (9 Hours)"
+          "Panama Bay (3h)",
+          "Taboga Island (8h)",
+          "Contadora Island (9h)"
         ],
         priceFrom: "$800.00",
         images: ["MarStong.jpg", "MarStong1.jpg", "MarStong2.jpg", "MarStong3.jpg", "MarStong4.jpg", "MarStong5.jpg"]
@@ -306,27 +311,31 @@
         badgeEn: "Large Catamaran",
         capacityEs: "Hasta 35 pasajeros",
         capacityEn: "Up to 35 passengers",
-        marinaEs: "Salida: Isla Perico, Amador Causeway",
-        marinaEn: "Departure: Isla Perico, Amador Causeway",
-        descEs: "Este Catamarán tiene capacidad para 35 pasajeros.",
-        descEn: "This catamaran has capacity for 35 passengers.",
+        marinaEs: "Salida: Isla Perico, Amador",
+        marinaEn: "Departure: Isla Perico, Amador",
+        descEs: "Gran cubierta y estabilidad para eventos, cumpleaños y grupos grandes.",
+        descEn: "Large deck and smooth stability for events, birthdays, and big groups.",
         includesEs: [
-          "Nevera con hielo", "Agua", "Kit de BBQ a Gas", "Piscina flotante",
-          "Colchoneta flotante", "Flotadores", "Música Bluetooth", "Baños",
-          "Comedor", "Tripulación", "Tasas portuarias", "Dinghy"
+          "Nevera con hielo y agua",
+          "Kit de BBQ a gas y comedor",
+          "Piscina, colchoneta y flotadores",
+          "Baños y música Bluetooth",
+          "Tripulación, dinghy y tasas portuarias"
         ],
         includesEn: [
-          "Cooler with ice", "Water", "Gas BBQ Kit", "Floating pool",
-          "Floating mat", "Floats", "Bluetooth music", "Bathrooms",
-          "Dining area", "Crew", "Port fees", "Dinghy"
+          "Cooler with ice and water",
+          "Gas BBQ kit and dining area",
+          "Floating pool, mat and floats",
+          "Bathrooms and Bluetooth music",
+          "Crew, dinghy and port fees"
         ],
         toursEs: [
-          "Bahía de Panamá (4 Horas)",
-          "Isla Taboga (8 Horas)"
+          "Bahía de Panamá (4h)",
+          "Isla Taboga (8h)"
         ],
         toursEn: [
-          "Panama Bay (4 Hours)",
-          "Taboga Island (8 Hours)"
+          "Panama Bay (4h)",
+          "Taboga Island (8h)"
         ],
         priceFrom: "$1,400.00",
         images: ["Suncat.jpg", "Suncat1.jpg", "Suncat2.jpg", "Suncat3.jpg"]
@@ -338,31 +347,35 @@
         badgeEn: "Sport Fishing",
         capacityEs: "Hasta 6 pasajeros",
         capacityEn: "Up to 6 passengers",
-        marinaEs: "Salida: Isla Perico, Amador Causeway",
-        marinaEn: "Departure: Isla Perico, Amador Causeway",
-        descEs: "Este bote tiene capacidad para 6 pasajeros.",
-        descEn: "This boat has capacity for 6 passengers.",
+        marinaEs: "Salida: Isla Perico, Amador",
+        marinaEn: "Departure: Isla Perico, Amador",
+        descEs: "Equipado para jornadas de pesca deportiva o escapadas rápidas a islas.",
+        descEn: "Equipped for sport fishing trips or fast island getaways.",
         includesEs: [
-          "Nevera con hielo", "Agua", "Kit de BBQ a Gas",
-          "Equipo de pesca Profesional", "Flotadores", "Música Bluetooth",
-          "Tripulación", "Tasas portuarias"
+          "Equipo de pesca profesional",
+          "Nevera con hielo y agua",
+          "Kit de BBQ a gas",
+          "Flotadores y música Bluetooth",
+          "Tripulación y tasas portuarias"
         ],
         includesEn: [
-          "Cooler with ice", "Water", "Gas BBQ Kit",
-          "Professional fishing gear", "Floats", "Bluetooth music",
-          "Crew", "Port fees"
+          "Professional fishing gear",
+          "Cooler with ice and water",
+          "Gas BBQ kit",
+          "Floats and Bluetooth music",
+          "Crew and port fees"
         ],
         toursEs: [
-          "Bahía de Panamá (8 Horas)",
-          "Isla Taboga (8 Horas)",
-          "Isla Otoque (8 Horas)",
-          "Archipiélago de las Perlas (8 Horas)"
+          "Bahía de Panamá (8h)",
+          "Isla Taboga (8h)",
+          "Isla Otoque (8h)",
+          "Las Perlas (8h)"
         ],
         toursEn: [
-          "Panama Bay (8 Hours)",
-          "Taboga Island (8 Hours)",
-          "Otoque Island (8 Hours)",
-          "Pearl Islands Archipelago (8 Hours)"
+          "Panama Bay (8h)",
+          "Taboga Island (8h)",
+          "Otoque Island (8h)",
+          "Pearl Islands (8h)"
         ],
         priceFrom: "$850.00",
         images: ["botepesca.jpg", "botepesca1.jpg", "botepesca2.jpg", "botepesca3.jpg"]
@@ -374,29 +387,31 @@
         badgeEn: "Water Fun",
         capacityEs: "Hasta 12 pasajeros",
         capacityEn: "Up to 12 passengers",
-        marinaEs: "Salida: Flamenco Marina, Amador Causeway",
-        marinaEn: "Departure: Flamenco Marina, Amador Causeway",
-        descEs: "Este yate tiene capacidad para 12 pasajeros.",
-        descEn: "This yacht has capacity for 12 passengers.",
+        marinaEs: "Salida: Flamenco Marina, Amador",
+        marinaEn: "Departure: Flamenco Marina, Amador",
+        descEs: "Incluye juguetes acuáticos para disfrutar al máximo en el mar.",
+        descEn: "Loaded with water toys for non-stop fun at sea.",
         includesEs: [
-          "Nevera con hielo", "Agua", "Kit de BBQ a Gas", "Piscina flotante",
-          "Colchoneta flotante", "Kayak", "Paddle", "Tobogán",
-          "Flotadores", "Música Bluetooth", "Baño", "Comedor",
-          "Tripulación", "Tasas portuarias", "Dinghy"
+          "Kayak, paddleboard y tobogán",
+          "Piscina, colchoneta y flotadores",
+          "Nevera con hielo, agua y BBQ a gas",
+          "Baño, comedor y música Bluetooth",
+          "Tripulación, dinghy y tasas portuarias"
         ],
         includesEn: [
-          "Cooler with ice", "Water", "Gas BBQ Kit", "Floating pool",
-          "Floating mat", "Kayak", "Paddleboard", "Water slide",
-          "Floats", "Bluetooth music", "Bathroom", "Dining area",
-          "Crew", "Port fees", "Dinghy"
+          "Kayak, paddleboard and water slide",
+          "Floating pool, mat and floats",
+          "Cooler with ice, water & gas BBQ",
+          "Bathroom, dining area & Bluetooth music",
+          "Crew, dinghy and port fees"
         ],
         toursEs: [
-          "Bahía de Panamá (2 Horas)",
-          "Isla Taboga (8 Horas)"
+          "Bahía de Panamá (2h)",
+          "Isla Taboga (8h)"
         ],
         toursEn: [
-          "Panama Bay (2 Hours)",
-          "Taboga Island (8 Hours)"
+          "Panama Bay (2h)",
+          "Taboga Island (8h)"
         ],
         priceFrom: "$600.00",
         images: ["bff.jpg", "bff1.jpg", "bff2.jpg", "bff3.jpg"]
@@ -408,31 +423,33 @@
         badgeEn: "VIP Catamaran",
         capacityEs: "Hasta 25 pasajeros",
         capacityEn: "Up to 25 passengers",
-        marinaEs: "Salida: Flamenco Marina, Amador Causeway",
-        marinaEn: "Departure: Flamenco Marina, Amador Causeway",
-        descEs: "Este Catamarán tiene capacidad para 25 pasajeros.",
-        descEn: "This catamaran has capacity for 25 passengers.",
+        marinaEs: "Salida: Flamenco Marina, Amador",
+        marinaEn: "Departure: Flamenco Marina, Amador",
+        descEs: "Experiencia VIP con jetski, banana y áreas interiores climatizadas.",
+        descEn: "VIP experience featuring jet ski, banana boat, and air-conditioned cabins.",
         includesEs: [
-          "Nevera con hielo", "Agua", "Kit de BBQ a Gas", "Piscina flotante",
-          "Jetski", "Banana", "Colchonetas flotantes", "Flotadores",
-          "Música Bluetooth", "Baños con Duchas", "3 Recámaras", "A/C",
-          "Comedor", "Cocina", "Tripulación", "Tasas portuarias", "Dinghy"
+          "Jetski, banana y piscina flotante",
+          "Colchonetas y flotadores",
+          "Nevera con hielo, agua y BBQ a gas",
+          "A/C, 3 recámaras, baños con ducha, cocina y comedor",
+          "Música Bluetooth, tripulación, dinghy y tasas portuarias"
         ],
         includesEn: [
-          "Cooler with ice", "Water", "Gas BBQ Kit", "Floating pool",
-          "Jet ski", "Banana boat", "Floating mats", "Floats",
-          "Bluetooth music", "Bathrooms with showers", "3 Bedrooms", "A/C",
-          "Dining area", "Kitchen", "Crew", "Port fees", "Dinghy"
+          "Jet ski, banana boat and floating pool",
+          "Floating mats and floats",
+          "Cooler with ice, water & gas BBQ",
+          "A/C, 3 bedrooms, shower bathrooms, kitchen & dining",
+          "Bluetooth music, crew, dinghy and port fees"
         ],
         toursEs: [
-          "Bahía de Panamá (4 Horas)",
-          "Isla Taboga (8 Horas)",
-          "Archipiélago de las Perlas (12 Horas, hasta 15 pasajeros)"
+          "Bahía de Panamá (4h)",
+          "Isla Taboga (8h)",
+          "Las Perlas (12h · máx. 15 pax)"
         ],
         toursEn: [
-          "Panama Bay (4 Hours)",
-          "Taboga Island (8 Hours)",
-          "Pearl Islands Archipelago (12 Hours, up to 15 guests)"
+          "Panama Bay (4h)",
+          "Taboga Island (8h)",
+          "Pearl Islands (12h · max 15 guests)"
         ],
         priceFrom: "$1,100.00",
         images: ["CatamaranL1.jpg", "CatamaranL2.jpg", "CatamaranL3.jpg", "CatamaranL4.jpg", "CatamaranL5.jpg", "CatamaranL6.jpg", "CatamaranL7.jpg"]
@@ -440,48 +457,42 @@
     ];
 
     // =========================================================================
-    // 2. LOS 7 TOURS Y TRANSPORTE PRIVADO DETALLADOS
+    // 2. LOS 7 TOURS Y TRANSPORTE PRIVADO (TEXTOS OPTIMIZADOS + CAPACIDAD VISIBLE)
     // =========================================================================
     const tours = [
       {
         es: "City Tour",
         en: "City Tour",
-        badgeEs: "Ciudad e Historia",
-        badgeEn: "City & History",
+        badgeEs: "Ciudad e Historia · ~6h",
+        badgeEn: "City & History · ~6h",
         capacityEs: "Hasta 30 pasajeros",
         capacityEn: "Up to 30 passengers",
-        descEs: "Te vamos a dar una experiencia desde el pasado hasta el presente en un solo día: Desde las edificaciones coloniales del Casco Antiguo, Los gigantes de acero cruzando el Canal de Panamá, La brisa de la Calzada de Amador y Los rascacielos que se alzan sobre la Bahía de Panamá.",
-        descEn: "We'll give you an experience from the past to the present in a single day: From the colonial buildings of Casco Antiguo, the steel giants crossing the Panama Canal, the breeze of the Amador Causeway, and the skyscrapers rising over Panama Bay.",
-        placesTitleEs: "Lugares que visitaremos",
-        placesTitleEn: "Places we will visit",
-        placesEs: ["Canal de Panamá", "Casco Antiguo", "Calzada de Amador", "Recorrido panorámico por la ciudad"],
-        placesEn: ["Panama Canal", "Casco Antiguo", "Amador Causeway", "Panoramic city tour"],
+        descEs: "Recorre lo mejor de la ciudad en un día: historia colonial, el Canal de Panamá, Amador y la vista moderna de la bahía.",
+        descEn: "Explore the best of the city in one day: colonial history, the Panama Canal, Amador, and the modern bay skyline.",
+        placesTitleEs: "Paradas principales",
+        placesTitleEn: "Main stops",
+        placesEs: ["Canal de Panamá", "Casco Antiguo", "Calzada de Amador", "Vista panorámica"],
+        placesEn: ["Panama Canal", "Casco Antiguo", "Amador Causeway", "Panoramic city drive"],
         includesEs: [
-          "Transporte privado con A/C",
-          "Conductor/guía",
-          "Agua para hidratación",
-          "Aproximadamente 6 horas de recorrido"
+          "Transporte privado con A/C (~6 horas)",
+          "Conductor / guía",
+          "Agua para hidratación"
         ],
         includesEn: [
-          "Private A/C transportation",
-          "Driver/guide",
-          "Water for hydration",
-          "Approximately 6-hour tour"
+          "Private A/C transport (~6 hours)",
+          "Driver / guide",
+          "Bottled water"
         ],
         excludesEs: [
-          "Entradas a atracciones o sitios con costo",
-          "Alimentación",
-          "Servicios adicionales no especificados"
+          "Entradas a atracciones con costo y alimentación"
         ],
         excludesEn: [
-          "Admission fees to attractions or paid sites",
-          "Meals",
-          "Additional unspecified services"
+          "Paid attraction tickets and meals"
         ],
-        noteTitleEs: "Nota importante",
-        noteTitleEn: "Important note",
-        noteEs: "El itinerario puede ajustarse según las preferencias del grupo y las condiciones del día.",
-        noteEn: "The itinerary may be adjusted according to group preferences and day conditions.",
+        noteTitleEs: "Flexible",
+        noteTitleEn: "Flexible",
+        noteEs: "Itinerario adaptable según preferencias del grupo y condiciones del día.",
+        noteEn: "Itinerary can be tailored to group preferences and day conditions.",
         rateLabelEs: "Tarifa según grupo / fecha",
         rateLabelEn: "Rate by group / date",
         rateValueEs: "Consultar por WhatsApp",
@@ -491,34 +502,32 @@
       {
         es: "Tour Isla de los Monos",
         en: "Monkey Island Tour",
-        badgeEs: "Naturaleza y Fauna",
-        badgeEn: "Nature & Wildlife",
+        badgeEs: "Fauna y Naturaleza · ~2h",
+        badgeEn: "Wildlife & Nature · ~2h",
         capacityEs: "Hasta 30 pasajeros",
         capacityEn: "Up to 30 passengers",
-        descEs: "Conoce la fauna y los paisajes naturales del Lago Gatún. Adéntrate con nosotros por los canales de la selva panameña y encuéntrate cara a cara con nuestras especies de monos como los titíes y capuchino en su hábitat natural.",
-        descEn: "Discover the wildlife and natural landscapes of Gatun Lake. Venture with us through the canals of the Panamanian rainforest and come face to face with monkey species such as tamarins and capuchins in their natural habitat.",
+        descEs: "Navega por los canales del Lago Gatún y observa monos titíes y capuchinos en su hábitat natural.",
+        descEn: "Cruise through Gatun Lake's jungle canals and spot tamarin and capuchin monkeys in their natural habitat.",
         placesTitleEs: "",
         placesTitleEn: "",
         placesEs: [],
         placesEn: [],
         includesEs: [
-          "Transporte Terrestre desde/hacia el hotel",
-          "Transporte Acuático",
-          "Guía durante el recorrido",
-          "Aproximadamente 2 horas de recorrido"
+          "Transporte terrestre desde/hacia hotel",
+          "Paseo en lancha por el Lago Gatún (~2 horas)",
+          "Guía durante todo el recorrido"
         ],
         includesEn: [
-          "Round-trip hotel land transportation",
-          "Water transportation",
-          "Guide during the tour",
-          "Approximately 2-hour tour"
+          "Round-trip hotel land transfer",
+          "Boat tour on Gatun Lake (~2 hours)",
+          "Guide throughout the tour"
         ],
         excludesEs: [],
         excludesEn: [],
-        noteTitleEs: "Recomendaciones clave",
-        noteTitleEn: "Key recommendations",
-        noteEs: "Lleva repelente de insectos, ropa cómoda y ligera, y protector solar. Evita tocar a los animales y consulta las normas del guía sobre alimentación, ya que darles comida altera su comportamiento natural y afecta su bienestar.",
-        noteEn: "Bring insect repellent, comfortable light clothing, and sunscreen. Avoid touching the animals and follow the guide's rules on feeding, as giving them food alters their natural behavior and affects their well-being.",
+        noteTitleEs: "Recomendación",
+        noteTitleEn: "Tip",
+        noteEs: "Lleva repelente, ropa ligera y protector solar. No tocar ni alimentar a los monos.",
+        noteEn: "Bring repellent, light clothes, and sunscreen. Do not touch or feed the monkeys.",
         rateLabelEs: "Tarifa según grupo / fecha",
         rateLabelEn: "Rate by group / date",
         rateValueEs: "Consultar por WhatsApp",
@@ -532,31 +541,23 @@
         badgeEn: "Living Culture",
         capacityEs: "Hasta 30 pasajeros",
         capacityEn: "Up to 30 passengers",
-        descEs: "Acércate a las tradiciones, cultura y entorno natural. Disfruta de un día especial descubriendo la cultura, las tradiciones y la belleza natural de la comunidad Emberá.",
-        descEn: "Connect with traditions, culture, and the natural environment. Enjoy a special day discovering the culture, traditions, and natural beauty of the Emberá community.",
-        placesTitleEs: "Experiencias del recorrido",
-        placesTitleEn: "Tour experiences",
-        placesEs: ["Mola Piragua", "Cascadas (~20 min)", "Aldea Emberá", "Recorrido guiado por guía local Emberá"],
-        placesEn: ["Mola Piragua", "Waterfalls (~20 min)", "Embera Village", "Guided tour with local Emberá guide"],
+        descEs: "Inmersión cultural y natural junto a la comunidad Emberá: navegación en piragua, cascada, danzas y gastronomía típica.",
+        descEn: "Cultural and nature immersion with the Emberá community: canoe ride, waterfall, traditional dances, and local cuisine.",
+        placesTitleEs: "Experiencias",
+        placesTitleEn: "Highlights",
+        placesEs: ["Mola Piragua", "Cascada (~20 min)", "Aldea Emberá", "Danza y cultura local"],
+        placesEn: ["Mola Piragua", "Waterfall (~20 min)", "Embera Village", "Traditional dance & culture"],
         includesEs: [
-          "Transporte terrestre de ida y vuelta",
-          "Transporte en bote hacia Mola Piragua",
-          "Visita a las cascadas, con aproximadamente 20 minutos para disfrutar del lugar",
-          "Visita a la aldea Emberá",
-          "Presentación de danza tradicional de la comunidad",
-          "Snack de frutas tropicales",
-          "Almuerzo típico: patacones acompañados de pescado frito",
-          "Recorrido guiado por la comunidad, acompañado de un guía local Emberá, quien compartirá información sobre su cultura, tradiciones y forma de vida"
+          "Transporte terrestre ida y vuelta + bote a Mola Piragua",
+          "Visita a cascada (~20 min) y aldea con guía local Emberá",
+          "Presentación de danza tradicional",
+          "Snack de frutas y almuerzo típico (pescado frito con patacones)"
         ],
         includesEn: [
-          "Round-trip land transportation",
-          "Boat transportation to Mola Piragua",
-          "Visit to the waterfalls, with approximately 20 minutes to enjoy the spot",
-          "Visit to the Emberá village",
-          "Traditional community dance presentation",
-          "Tropical fruit snack",
-          "Traditional lunch: patacones served with fried fish",
-          "Guided community tour accompanied by a local Emberá guide sharing insights on culture, traditions, and way of life"
+          "Round-trip land transport + boat to Mola Piragua",
+          "Waterfall stop (~20 min) & village tour with local Emberá guide",
+          "Traditional dance performance",
+          "Tropical fruit snack & traditional lunch (fried fish with patacones)"
         ],
         excludesEs: [],
         excludesEn: [],
@@ -573,33 +574,29 @@
       {
         es: "Safari Nocturno de Cocodrilos",
         en: "Night Crocodile Safari",
-        badgeEs: "Aventura Nocturna",
-        badgeEn: "Night Adventure",
+        badgeEs: "Aventura Nocturna · ~2h",
+        badgeEn: "Night Adventure · ~2h",
         capacityEs: "Hasta 30 pasajeros",
         capacityEn: "Up to 30 passengers",
-        descEs: "Vive una aventura nocturna de observación de fauna con guía. Un safari nocturno en lancha por el Lago Gatún, con la observación de cocodrilos como gran atractivo. Descubre cocodrilos en su hábitat natural y, con suerte, aves nocturnas y otra fauna silvestre. ¡Conoce el lado salvaje de Panamá después del anochecer!",
-        descEn: "Experience a guided night wildlife-watching adventure. A night boat safari on Gatun Lake with crocodile spotting as the main highlight. Discover crocodiles in their natural habitat and, with luck, night birds and other wildlife. Experience Panama's wild side after dark!",
-        placesTitleEs: "Ruta y atractivo",
-        placesTitleEn: "Route & highlight",
-        placesEs: ["Safari nocturno en lancha por el Lago Gatún", "Observación de cocodrilos", "Aves nocturnas y fauna silvestre"],
-        placesEn: ["Night boat safari on Gatun Lake", "Crocodile spotting", "Night birds & wildlife"],
+        descEs: "Recorrido nocturno guiado en lancha por el Lago Gatún para avistar cocodrilos, aves y fauna silvestre después del anochecer.",
+        descEn: "Guided night boat safari on Gatun Lake to spot crocodiles, night birds, and wildlife after dark.",
+        placesTitleEs: "Atractivos",
+        placesTitleEn: "Highlights",
+        placesEs: ["Lancha nocturna en Lago Gatún", "Avistamiento de cocodrilos", "Fauna nocturna"],
+        placesEn: ["Night boat on Gatun Lake", "Crocodile spotting", "Nocturnal wildlife"],
         includesEs: [
-          "Transporte Terrestre desde/hacia el hotel",
-          "Transporte Acuático",
-          "Guía durante el recorrido",
-          "Aproximadamente 2 horas de recorrido"
+          "Transporte terrestre desde/hacia hotel",
+          "Lancha nocturna y guía (~2 horas)"
         ],
         includesEn: [
-          "Round-trip hotel land transportation",
-          "Water transportation",
-          "Guide during the tour",
-          "Approximately 2-hour tour"
+          "Round-trip hotel land transfer",
+          "Night boat ride & guide (~2 hours)"
         ],
         excludesEs: [],
         excludesEn: [],
         noteTitleEs: "Recomendación",
-        noteTitleEn: "Recommendation",
-        noteEs: "Lleva repelente de insectos y ropa ligera.",
+        noteTitleEn: "Tip",
+        noteEs: "Llevar repelente de insectos y ropa ligera.",
         noteEn: "Bring insect repellent and light clothing.",
         rateLabelEs: "Tarifa según grupo / fecha",
         rateLabelEn: "Rate by group / date",
@@ -610,25 +607,23 @@
       {
         es: "Zona Libre de Colón",
         en: "Colon Free Zone",
-        badgeEs: "Compras",
-        badgeEn: "Shopping",
-        capacityEs: "Hasta 30 pasajeros",
-        capacityEn: "Up to 30 passengers",
-        descEs: "Conoce una de las zonas comerciales más importantes de la región de Panamá.",
-        descEn: "Discover one of the most important commercial areas in the Panama region.",
+        badgeEs: "Compras · Mín. 4 pax",
+        badgeEn: "Shopping · Min. 4 guests",
+        capacityEs: "4 a 30 pasajeros",
+        capacityEn: "4 to 30 passengers",
+        descEs: "Traslado cómodo y directo a uno de los centros comerciales mayoristas y libres de impuestos más importantes de la región.",
+        descEn: "Comfortable direct transfer to one of the region's largest duty-free and wholesale shopping hubs.",
         placesTitleEs: "",
         placesTitleEn: "",
         placesEs: [],
         placesEn: [],
         includesEs: [
-          "Transporte desde/hacia el hotel",
-          "Entrada a la Zona Libre de Colón",
-          "Hidratación"
+          "Transporte ida y vuelta desde/hacia hotel",
+          "Pase de entrada a Zona Libre e hidratación"
         ],
         includesEn: [
           "Round-trip hotel transportation",
-          "Colon Free Zone entry",
-          "Hydration"
+          "Colon Free Zone entry pass & hydration"
         ],
         excludesEs: [
           "Alimentación"
@@ -636,10 +631,10 @@
         excludesEn: [
           "Meals"
         ],
-        noteTitleEs: "Requisito mínimo",
-        noteTitleEn: "Minimum requirement",
-        noteEs: "Esta experiencia es mínima para 4 personas.",
-        noteEn: "This experience requires a minimum of 4 people.",
+        noteTitleEs: "Requisito",
+        noteTitleEn: "Requirement",
+        noteEs: "Mínimo 4 personas por reserva.",
+        noteEn: "Minimum 4 people per booking.",
         rateLabelEs: "Mínimo 4 personas",
         rateLabelEn: "Minimum 4 people",
         rateValueEs: "Consultar por WhatsApp",
@@ -653,25 +648,19 @@
         badgeEn: "Caribbean & History",
         capacityEs: "Hasta 30 pasajeros",
         capacityEn: "Up to 30 passengers",
-        descEs: "Explora paisajes, historias y Fortificaciones del Caribe. Descubre la belleza de las aguas cristalinas del Caribe. Disfruta de nuestro paseo en lancha por Venas Azules. Y disfruta de descansar en Playa Blanca o Playa la Huerta.",
-        descEn: "Explore Caribbean landscapes, history, and fortifications. Discover the beauty of crystal-clear Caribbean waters. Enjoy our boat ride through Venas Azules and relax at Playa Blanca or Playa la Huerta.",
-        placesTitleEs: "Lugares del recorrido",
-        placesTitleEn: "Tour spots",
-        placesEs: ["Fortificaciones de Portobelo", "Paseo en lancha por Venas Azules", "Playa Blanca o Playa la Huerta"],
-        placesEn: ["Portobelo fortifications", "Boat ride through Venas Azules", "Playa Blanca or Playa la Huerta"],
+        descEs: "Historia colonial en el Caribe panameño, paseo en lancha por Venas Azules y descanso en playas cristalinas.",
+        descEn: "Colonial history on Panama's Caribbean coast, boat ride through Venas Azules, and beach time in crystal-clear waters.",
+        placesTitleEs: "Lugares a visitar",
+        placesTitleEn: "Stops",
+        placesEs: ["Fortificaciones de Portobelo", "Venas Azules en lancha", "Playa Blanca o La Huerta"],
+        placesEn: ["Portobelo Fortifications", "Venas Azules boat ride", "Playa Blanca or La Huerta"],
         includesEs: [
-          "Transporte desde/hacia el hotel",
-          "Transporte Acuático",
-          "Hidratación",
-          "Snacks",
-          "Cervezas"
+          "Transporte terrestre ida y vuelta + lancha",
+          "Hidratación, snacks y cervezas"
         ],
         includesEn: [
-          "Round-trip hotel transportation",
-          "Water transportation",
-          "Hydration",
-          "Snacks",
-          "Beers"
+          "Round-trip land transport + boat ride",
+          "Hydration, snacks and beers"
         ],
         excludesEs: [
           "Alimentación"
@@ -680,7 +669,7 @@
           "Meals"
         ],
         noteTitleEs: "Recomendación",
-        noteTitleEn: "Recommendation",
+        noteTitleEn: "Tip",
         noteEs: "Llevar protector solar, toallas y cambio de ropa.",
         noteEn: "Bring sunscreen, towels, and a change of clothes.",
         rateLabelEs: "Tarifa según grupo / fecha",
@@ -696,21 +685,21 @@
         badgeEn: "Private Transfers",
         capacityEs: "Hasta 30 pasajeros",
         capacityEn: "Up to 30 passengers",
-        descEs: "Te ofrecemos transporte privado y seguro. Nuestros autobuses cuentan con A/C. Conductores idóneos, responsables, amables y seguros.",
-        descEn: "We offer safe, private transportation. Our buses feature A/C with qualified, responsible, friendly, and safe drivers.",
-        placesTitleEs: "Características de la flota",
-        placesTitleEn: "Fleet features",
-        placesEs: ["Autobuses con A/C", "Conductores idóneos, responsables, amables y seguros"],
-        placesEn: ["A/C buses", "Qualified, responsible, friendly, and safe drivers"],
+        descEs: "Traslados ejecutivos, turísticos y grupales en autobuses climatizados con conductores puntuales y certificados.",
+        descEn: "Executive, tourist, and group transfers in air-conditioned buses with punctual, certified drivers.",
+        placesTitleEs: "",
+        placesTitleEn: "",
+        placesEs: [],
+        placesEn: [],
         includesEs: [
-          "Transporte privado y seguro",
-          "Autobuses con A/C",
-          "Conductores idóneos, responsables, amables y seguros"
+          "Autobuses privados con A/C (hasta 30 pasajeros)",
+          "Conductores idóneos, amables y seguros",
+          "Rutas personalizadas desde aeropuerto, hotel o ciudad"
         ],
         includesEn: [
-          "Safe private transportation",
-          "A/C buses",
-          "Qualified, responsible, friendly, and safe drivers"
+          "Private A/C buses (up to 30 passengers)",
+          "Licensed, friendly, and safe drivers",
+          "Custom routes from airport, hotel, or city"
         ],
         excludesEs: [],
         excludesEn: [],
@@ -858,8 +847,8 @@
 
           const msg = encodeURIComponent(
             (lang === "es"
-              ? `Hola BMPANAMATRIPS, deseo consultar disponibilidad y reservar: ${name} (${y.priceFrom} USD).`
-              : `Hello BMPANAMATRIPS, I would like to check availability and book: ${name} (${y.priceFrom} USD).`)
+              ? `Hola BMPANAMATRIPS, deseo consultar disponibilidad y reservar: ${name} (${capacity}, desde ${y.priceFrom} USD).`
+              : `Hello BMPANAMATRIPS, I would like to check availability and book: ${name} (${capacity}, from ${y.priceFrom} USD).`)
           );
 
           return `
@@ -931,7 +920,7 @@
           const msg = encodeURIComponent(
             (lang === "es"
               ? "Hola BMPANAMATRIPS, deseo consultar precio y disponibilidad para: "
-              : "Hello BMPANAMATRIPS, I'd like to ask about price and availability for: ") + name + "."
+              : "Hello BMPANAMATRIPS, I'd like to ask about price and availability for: ") + `${name} (${capacity}).`
           );
 
           return `<article class="card">
