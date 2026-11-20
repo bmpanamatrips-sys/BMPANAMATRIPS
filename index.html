@@ -38,13 +38,18 @@
 
     /* CARRUSEL HORIZONTAL DE YATES */
     .yacht-slider-wrapper{position:relative}
-    .yacht-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px 4px 24px;scrollbar-width:none;-ms-overflow-style:none}
+    .yacht-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px 4px 24px;scrollbar-width:none;-ms-overflow-style:none;min-height:620px}
     .yacht-track::-webkit-scrollbar{display:none}
     .yacht-slide{flex:0 0 calc(50% - 12px);min-width:340px;scroll-snap-align:start;display:flex}
 
-    .fleet-dots{display:flex;justify-content:center;gap:8px;margin-top:4px}
+    .fleet-dots{display:flex;justify-content:center;gap:8px;margin-top:4px;min-height:14px}
     .fleet-dot{width:10px;height:10px;border-radius:50%;background:#c5dddd;border:none;padding:0;cursor:pointer;transition:.25s}
     .fleet-dot.active{background:var(--navy);width:26px;border-radius:10px}
+
+    /* ESTADOS DE CARGA Y RESPALDO PARA EVITAR SALTOS O HUECOS EN BLANCO */
+    .loading-placeholder{width:100%;min-height:360px;border:1px dashed #c7dfdf;border-radius:20px;background:#ffffffb8;color:var(--navy);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
+    .fallback-box{width:100%;min-height:280px;border:1px solid #dceaea;border-radius:20px;background:#fff;color:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:28px;text-align:center}
+    .fallback-box p{margin:0;color:var(--muted);max-width:460px;line-height:1.55}
 
     /* TARJETAS */
     .card{width:100%;border:1px solid #dceaea;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(7,59,76,.07);display:flex;flex-direction:column}
@@ -102,7 +107,7 @@
     .btn-book-yacht:hover{filter:brightness(.95);transform:translateY(-1px)}
 
     /* GRID DE TOURS EN TIERRA */
-    .tour-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+    .tour-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;min-height:520px}
     .card .btn-main{width:100%;padding:13px;background:var(--navy);color:#fff;font-size:14.5px;margin-top:auto}
     .card .btn-main:hover{background:var(--blue)}
 
@@ -118,7 +123,7 @@
     footer{background:#052d3a;color:#c8dfe1;padding:24px 22px;text-align:center;font-size:13px}.wa-float{position:fixed;right:20px;bottom:20px;z-index:20;background:#20c66b;color:white;border-radius:50px;padding:15px 19px;font-weight:900;box-shadow:0 8px 25px #0003}
     
     @media(max-width:960px){.yacht-slide{flex:0 0 88%}.tour-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.about-photo{height:300px}}
-    @media(max-width:640px){.nav{flex-wrap:wrap}.brand{font-size:18px}nav{order:3;width:100%;justify-content:space-between;gap:6px}nav a{font-size:11px}.yacht-slide{flex:0 0 92%;min-width:290px}.carousel-wrapper{height:230px}.section{padding:58px 18px}.wa-float{right:12px;bottom:12px;padding:13px 16px}}
+    @media(max-width:640px){.nav{flex-wrap:wrap}.brand{font-size:18px}nav{order:3;width:100%;justify-content:space-between;gap:6px}nav a{font-size:11px}.yacht-slide{flex:0 0 92%;min-width:290px}.yacht-track{min-height:560px}.carousel-wrapper{height:230px}.section{padding:58px 18px}.wa-float{right:12px;bottom:12px;padding:13px 16px}}
   </style>
 </head>
 <body>
@@ -161,7 +166,9 @@
       </div>
 
       <div class="yacht-slider-wrapper">
-        <div class="yacht-track" id="yachtTrack" onscroll="updateFleetDots()"></div>
+        <div class="yacht-track" id="yachtTrack" onscroll="updateFleetDots()">
+          <div class="loading-placeholder" data-es="Cargando flota de embarcaciones..." data-en="Loading vessel fleet...">Cargando flota de embarcaciones...</div>
+        </div>
         <div class="fleet-dots" id="fleetDots"></div>
       </div>
     </div></section>
@@ -171,7 +178,9 @@
       <div class="section-kicker" data-es="Experiencias en tierra y naturaleza" data-en="Land & nature experiences">Experiencias en tierra y naturaleza</div>
       <h2 data-es="Nuestros Tours y Transporte Privado" data-en="Our Tours & Private Transport">Nuestros Tours y Transporte Privado</h2>
       <p class="intro" data-es="Conoce los detalles, lugares a visitar, inclusiones y recomendaciones de cada tour. Cotiza o reserva directamente por WhatsApp." data-en="Check details, places to visit, inclusions, and recommendations for each tour. Quote or book directly on WhatsApp.">Conoce los detalles, lugares a visitar, inclusiones y recomendaciones de cada tour. Cotiza o reserva directamente por WhatsApp.</p>
-      <div class="tour-grid" id="tourGrid"></div>
+      <div class="tour-grid" id="tourGrid">
+        <div class="loading-placeholder" data-es="Cargando tours y transporte privado..." data-en="Loading tours and private transport...">Cargando tours y transporte privado...</div>
+      </div>
     </div></section>
 
     <section class="section about" id="nosotros"><div class="container about-grid">
@@ -206,7 +215,7 @@
     <img id="lightboxImg" src="" alt="Vista ampliada">
   </div>
 
-  <footer>© <span id="year"></span> BMPANAMATRIPS · <span data-es="Turismo y experiencias en Panamá" data-en="Tours and experiences in Panama">Turismo y experiencias en Panamá</span></footer>
+  <footer>© <span id="year">2026</span> BMPANAMATRIPS · <span data-es="Turismo y experiencias en Panamá" data-en="Tours and experiences in Panama">Turismo y experiencias en Panamá</span></footer>
   <a class="wa-float" href="https://wa.me/50763528504" target="_blank" rel="noopener">☏ WhatsApp</a>
 
   <script>
@@ -550,6 +559,7 @@
           "Guided community tour accompanied by a local Emberá guide sharing insights on culture, traditions, and way of life"
         ],
         excludesEs: [],
+        excludesEn: [],
         noteTitleEs: "",
         noteTitleEn: "",
         noteEs: "",
@@ -586,6 +596,7 @@
           "Approximately 2-hour tour"
         ],
         excludesEs: [],
+        excludesEn: [],
         noteTitleEs: "Recomendación",
         noteTitleEn: "Recommendation",
         noteEs: "Lleva repelente de insectos y ropa ligera.",
@@ -702,6 +713,7 @@
           "Qualified, responsible, friendly, and safe drivers"
         ],
         excludesEs: [],
+        excludesEn: [],
         noteTitleEs: "",
         noteTitleEn: "",
         noteEs: "",
@@ -718,6 +730,24 @@
     const yachtTrack = document.getElementById("yachtTrack");
     const fleetDots = document.getElementById("fleetDots");
     const tourGrid = document.getElementById("tourGrid");
+
+    function renderFallback(container, sectionNameEs, sectionNameEn) {
+      const msg = lang === "es"
+        ? `No pudimos cargar ${sectionNameEs} en este momento. Escríbenos por WhatsApp y te enviamos toda la información.`
+        : `We couldn't load ${sectionNameEn} right now. Message us on WhatsApp and we'll send all details.`;
+      const btnText = lang === "es" ? "Cotizar por WhatsApp" : "Quote on WhatsApp";
+      const waText = encodeURIComponent(
+        lang === "es"
+          ? `Hola BMPANAMATRIPS, deseo consultar información sobre ${sectionNameEs}.`
+          : `Hello BMPANAMATRIPS, I would like information about ${sectionNameEn}.`
+      );
+      container.innerHTML = `
+        <div class="fallback-box">
+          <p>${msg}</p>
+          <a class="btn btn-primary" href="https://wa.me/${WA_PHONE}?text=${waText}" target="_blank" rel="noopener">${btnText}</a>
+        </div>
+      `;
+    }
 
     function scrollFleet(direction) {
       const firstSlide = yachtTrack.querySelector(".yacht-slide");
@@ -816,143 +846,152 @@
     }
 
     function renderYachts() {
-      yachtTrack.innerHTML = yachts.map((y, index) => {
-        const name = y[lang];
-        const badge = lang === "es" ? y.badgeEs : y.badgeEn;
-        const capacity = lang === "es" ? y.capacityEs : y.capacityEn;
-        const marina = lang === "es" ? y.marinaEs : y.marinaEn;
-        const desc = lang === "es" ? y.descEs : y.descEn;
-        const includes = lang === "es" ? y.includesEs : y.includesEn;
-        const availTours = lang === "es" ? y.toursEs : y.toursEn;
+      try {
+        yachtTrack.innerHTML = yachts.map((y, index) => {
+          const name = y[lang];
+          const badge = lang === "es" ? y.badgeEs : y.badgeEn;
+          const capacity = lang === "es" ? y.capacityEs : y.capacityEn;
+          const marina = lang === "es" ? y.marinaEs : y.marinaEn;
+          const desc = lang === "es" ? y.descEs : y.descEn;
+          const includes = lang === "es" ? y.includesEs : y.includesEn;
+          const availTours = lang === "es" ? y.toursEs : y.toursEn;
 
-        const msg = encodeURIComponent(
-          (lang === "es"
-            ? `Hola BMPANAMATRIPS, deseo consultar disponibilidad y reservar: ${name} (${y.priceFrom} USD).`
-            : `Hello BMPANAMATRIPS, I would like to check availability and book: ${name} (${y.priceFrom} USD).`)
-        );
+          const msg = encodeURIComponent(
+            (lang === "es"
+              ? `Hola BMPANAMATRIPS, deseo consultar disponibilidad y reservar: ${name} (${y.priceFrom} USD).`
+              : `Hello BMPANAMATRIPS, I would like to check availability and book: ${name} (${y.priceFrom} USD).`)
+          );
 
-        return `
-          <div class="yacht-slide">
-            <article class="card">
-              ${buildCarouselHtml("yacht", index, name, badge, y.images)}
-              <div class="card-body">
-                <div class="yacht-top-row">
-                  <h3>${name}</h3>
-                  <span class="capacity-tag">👥 ${capacity}</span>
+          return `
+            <div class="yacht-slide">
+              <article class="card">
+                ${buildCarouselHtml("yacht", index, name, badge, y.images)}
+                <div class="card-body">
+                  <div class="yacht-top-row">
+                    <h3>${name}</h3>
+                    <span class="capacity-tag">👥 ${capacity}</span>
+                  </div>
+                  <div class="marina-line">📍 ${marina}</div>
+                  <p class="card-desc">${desc}</p>
+
+                  <div class="detail-box">
+                    <div class="detail-title">${lang === "es" ? "Incluye / Detalles" : "Includes / Details"}</div>
+                    <ul class="includes-list">
+                      ${includes.map(item => `<li>${item}</li>`).join("")}
+                    </ul>
+                  </div>
+
+                  <div class="tours-avail-box">
+                    <div class="detail-title">${lang === "es" ? "Tours Disponibles" : "Available Tours"}</div>
+                    <div class="tours-pills">
+                      ${availTours.map(t => `<span class="tour-pill">⛵ ${t}</span>`).join("")}
+                    </div>
+                  </div>
+
+                  <div class="price-cta-box">
+                    <div class="price-block">
+                      <span class="price-label">${lang === "es" ? "Precio desde" : "Price from"}</span>
+                      <span class="price-amount">${y.priceFrom} <small>USD</small></span>
+                    </div>
+                    <a class="btn-book-yacht" href="https://wa.me/${WA_PHONE}?text=${msg}" target="_blank" rel="noopener">
+                      ${lang === "es" ? "Cotizar y reservar" : "Quote & book"}
+                    </a>
+                  </div>
                 </div>
-                <div class="marina-line">📍 ${marina}</div>
-                <p class="card-desc">${desc}</p>
+              </article>
+            </div>
+          `;
+        }).join("");
 
+        fleetDots.innerHTML = yachts.map((_, i) =>
+          `<button class="fleet-dot ${i === 0 ? 'active' : ''}" aria-label="Embarcación ${i+1}" onclick="goToFleetSlide(${i})"></button>`
+        ).join("");
+      } catch (err) {
+        fleetDots.innerHTML = "";
+        renderFallback(yachtTrack, "la flota de embarcaciones", "the vessel fleet");
+      }
+    }
+
+    function renderTours() {
+      try {
+        tourGrid.innerHTML = tours.map((t, index) => {
+          const name = t[lang];
+          const badge = lang === "es" ? t.badgeEs : t.badgeEn;
+          const capacity = lang === "es" ? t.capacityEs : t.capacityEn;
+          const desc = lang === "es" ? t.descEs : t.descEn;
+          const placesTitle = lang === "es" ? t.placesTitleEs : t.placesTitleEn;
+          const places = lang === "es" ? t.placesEs : t.placesEn;
+          const includes = lang === "es" ? t.includesEs : t.includesEn;
+          const excludes = lang === "es" ? t.excludesEs : t.excludesEn;
+          const noteTitle = lang === "es" ? t.noteTitleEs : t.noteTitleEn;
+          const note = lang === "es" ? t.noteEs : t.noteEn;
+          const rateLabel = lang === "es" ? t.rateLabelEs : t.rateLabelEn;
+          const rateValue = lang === "es" ? t.rateValueEs : t.rateValueEn;
+
+          const msg = encodeURIComponent(
+            (lang === "es"
+              ? "Hola BMPANAMATRIPS, deseo consultar precio y disponibilidad para: "
+              : "Hello BMPANAMATRIPS, I'd like to ask about price and availability for: ") + name + "."
+          );
+
+          return `<article class="card">
+            ${buildCarouselHtml("tour", index, name, badge, t.images)}
+            <div class="card-body">
+              <div class="yacht-top-row">
+                <h3>${name}</h3>
+                <span class="capacity-tag">👥 ${capacity}</span>
+              </div>
+              <p class="card-desc">${desc}</p>
+
+              ${places && places.length ? `
                 <div class="detail-box">
-                  <div class="detail-title">${lang === "es" ? "Incluye / Detalles" : "Includes / Details"}</div>
+                  <div class="detail-title">${placesTitle}</div>
+                  <div class="places-pills">
+                    ${places.map(p => `<span class="place-pill">📍 ${p}</span>`).join("")}
+                  </div>
+                </div>
+              ` : ""}
+
+              ${includes && includes.length ? `
+                <div class="detail-box">
+                  <div class="detail-title">${lang === "es" ? "Incluye" : "Includes"}</div>
                   <ul class="includes-list">
                     ${includes.map(item => `<li>${item}</li>`).join("")}
                   </ul>
                 </div>
+              ` : ""}
 
-                <div class="tours-avail-box">
-                  <div class="detail-title">${lang === "es" ? "Tours Disponibles" : "Available Tours"}</div>
-                  <div class="tours-pills">
-                    ${availTours.map(t => `<span class="tour-pill">⛵ ${t}</span>`).join("")}
-                  </div>
+              ${excludes && excludes.length ? `
+                <div class="detail-box">
+                  <div class="detail-title">${lang === "es" ? "No incluye" : "Not included"}</div>
+                  <ul class="excludes-list">
+                    ${excludes.map(item => `<li>${item}</li>`).join("")}
+                  </ul>
                 </div>
+              ` : ""}
 
-                <div class="price-cta-box">
-                  <div class="price-block">
-                    <span class="price-label">${lang === "es" ? "Precio desde" : "Price from"}</span>
-                    <span class="price-amount">${y.priceFrom} <small>USD</small></span>
-                  </div>
-                  <a class="btn-book-yacht" href="https://wa.me/${WA_PHONE}?text=${msg}" target="_blank" rel="noopener">
-                    ${lang === "es" ? "Cotizar y reservar" : "Quote & book"}
-                  </a>
+              ${note ? `
+                <div class="note-box">
+                  ${noteTitle ? `<strong>${noteTitle}</strong>` : ""}
+                  ${note}
                 </div>
+              ` : ""}
+
+              <div class="price-cta-box">
+                <div class="price-block">
+                  <span class="price-label">${rateLabel}</span>
+                  <span class="price-amount">${rateValue}</span>
+                </div>
+                <a class="btn-book-yacht" href="https://wa.me/${WA_PHONE}?text=${msg}" target="_blank" rel="noopener">
+                  ${lang === "es" ? "Consultar y reservar" : "Ask & book"}
+                </a>
               </div>
-            </article>
-          </div>
-        `;
-      }).join("");
-
-      fleetDots.innerHTML = yachts.map((_, i) =>
-        `<button class="fleet-dot ${i === 0 ? 'active' : ''}" aria-label="Embarcación ${i+1}" onclick="goToFleetSlide(${i})"></button>`
-      ).join("");
-    }
-
-    function renderTours() {
-      tourGrid.innerHTML = tours.map((t, index) => {
-        const name = t[lang];
-        const badge = lang === "es" ? t.badgeEs : t.badgeEn;
-        const capacity = lang === "es" ? t.capacityEs : t.capacityEn;
-        const desc = lang === "es" ? t.descEs : t.descEn;
-        const placesTitle = lang === "es" ? t.placesTitleEs : t.placesTitleEn;
-        const places = lang === "es" ? t.placesEs : t.placesEn;
-        const includes = lang === "es" ? t.includesEs : t.includesEn;
-        const excludes = lang === "es" ? t.excludesEs : t.excludesEn;
-        const noteTitle = lang === "es" ? t.noteTitleEs : t.noteTitleEn;
-        const note = lang === "es" ? t.noteEs : t.noteEn;
-        const rateLabel = lang === "es" ? t.rateLabelEs : t.rateLabelEn;
-        const rateValue = lang === "es" ? t.rateValueEs : t.rateValueEn;
-
-        const msg = encodeURIComponent(
-          (lang === "es"
-            ? "Hola BMPANAMATRIPS, deseo consultar precio y disponibilidad para: "
-            : "Hello BMPANAMATRIPS, I'd like to ask about price and availability for: ") + name + "."
-        );
-
-        return `<article class="card">
-          ${buildCarouselHtml("tour", index, name, badge, t.images)}
-          <div class="card-body">
-            <div class="yacht-top-row">
-              <h3>${name}</h3>
-              <span class="capacity-tag">👥 ${capacity}</span>
             </div>
-            <p class="card-desc">${desc}</p>
-
-            ${places && places.length ? `
-              <div class="detail-box">
-                <div class="detail-title">${placesTitle}</div>
-                <div class="places-pills">
-                  ${places.map(p => `<span class="place-pill">📍 ${p}</span>`).join("")}
-                </div>
-              </div>
-            ` : ""}
-
-            ${includes && includes.length ? `
-              <div class="detail-box">
-                <div class="detail-title">${lang === "es" ? "Incluye" : "Includes"}</div>
-                <ul class="includes-list">
-                  ${includes.map(item => `<li>${item}</li>`).join("")}
-                </ul>
-              </div>
-            ` : ""}
-
-            ${excludes && excludes.length ? `
-              <div class="detail-box">
-                <div class="detail-title">${lang === "es" ? "No incluye" : "Not included"}</div>
-                <ul class="excludes-list">
-                  ${excludes.map(item => `<li>${item}</li>`).join("")}
-                </ul>
-              </div>
-            ` : ""}
-
-            ${note ? `
-              <div class="note-box">
-                ${noteTitle ? `<strong>${noteTitle}</strong>` : ""}
-                ${note}
-              </div>
-            ` : ""}
-
-            <div class="price-cta-box">
-              <div class="price-block">
-                <span class="price-label">${rateLabel}</span>
-                <span class="price-amount">${rateValue}</span>
-              </div>
-              <a class="btn-book-yacht" href="https://wa.me/${WA_PHONE}?text=${msg}" target="_blank" rel="noopener">
-                ${lang === "es" ? "Consultar y reservar" : "Ask & book"}
-              </a>
-            </div>
-          </div>
-        </article>`;
-      }).join("");
+          </article>`;
+        }).join("");
+      } catch (err) {
+        renderFallback(tourGrid, "los tours y transporte privado", "tours and private transport");
+      }
     }
 
     function renderAll() {
@@ -968,9 +1007,10 @@
       renderAll();
     });
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+    try {
+      document.getElementById("year").textContent = new Date().getFullYear();
+    } catch (e) {}
     renderAll();
   </script>
 </body>
 </html>
- 
